@@ -25,7 +25,8 @@ function connectToS () {
 	   		name: 'B',
 	   		localAddress: socketToS.localAddress,
 	   		localPort: socketToS.localPort
-	   	}));
+		   }));
+		socketToS.close()
 	});
 
 	socketToS.on('data', function (data) {

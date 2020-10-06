@@ -25,7 +25,7 @@ function connectToS () {
 	   		localAddress: socketToS.localAddress,
 	   		localPort: socketToS.localPort
 		   }));
-		socketToS.close()   
+		socketToS.destroy()
 	});
 
 	socketToS.on('data', function (data) {

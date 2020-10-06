@@ -6,7 +6,7 @@ var rl = readline.createInterface({
 });
 
 
-var addressOfS = '18.234.219.140'; // replace this with the IP of the server running publicserver.js
+var addressOfS = '54.167.113.153'; // replace this with the IP of the server running publicserver.js
 var portOfS = 9999;
 
 var socketToS;

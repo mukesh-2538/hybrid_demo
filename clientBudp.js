@@ -16,7 +16,7 @@ socket.on('message', function (message, remote) {
 
 function sendMessageToS () {
 	var serverPort = 33333;
-	var serverHost = '54.167.113.153';
+	var serverHost = '54.146.157.118';
 
 	var message = new Buffer('B');
 	socket.send(message, 0, message.length, serverPort, serverHost, function (err, nrOfBytesSent) {
@@ -33,9 +33,9 @@ function sendMessageToA (address, port) {
 	console.log('sending UDP message to A:', address +':'+ port);
 	if(counter == 5) return;
 	var message = new Buffer(`GET / HTTP/1.0
-
+	/src/video/vid1
 	`);
-	socket.send(message, 0, message.length, port, address, function (err, nrOfBytesSent) {
+	socket.emit("http",message, 0, message.length, port, address, function (err, nrOfBytesSent) {
 	    if (err) return console.log(err);
 	    console.log('UDP message sent to A:', address +':'+ port);
 
